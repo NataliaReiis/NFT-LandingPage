@@ -1,6 +1,7 @@
 import icon from "../assets/icon.png";
 import super1 from "../assets/super1.png";
 import release2 from "../assets/release2.png";
+import Card from "./Card";
 
 export default function Free() {
   return (
@@ -8,7 +9,7 @@ export default function Free() {
       <div className="container">
         <div className="background">
           <div className="ellipse pink"></div>
-          <div className="ellipse orange"></div>
+          <div className="ellipse green"></div>
         </div>
         <div className="content">
           <div className="image">
@@ -16,13 +17,34 @@ export default function Free() {
           </div>
           <h2 className="title">Free NFT early birds</h2>
           <p className="description">
-            Sing up today and you'll get a free NFT when we launch
+            Sing up today and you get a free NFT when we launch
           </p>
         </div>
       </div>
       <div className="cards">
-        <div className="card1"></div>
-        <div className="card2"></div>
+        <div className="card1">
+          <Card 
+            image={super1}
+            series="Floop Series"
+            title="Purple Man"
+            price={2.99}
+            tag ={12983}
+            time={1}
+
+          />
+            
+        </div>
+        <div className="card2">
+        <Card 
+            image={release2}
+            series="Gloop Series"
+            title="Purple Man"
+            price={3.93}
+            tag ={12983}
+            time={2}
+
+          />
+        </div>
       </div>
     </div>
   )
