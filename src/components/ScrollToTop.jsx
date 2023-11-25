@@ -1,21 +1,17 @@
-import { useState } from "react";
 import { BsChevronUp } from "react-icons/bs";
 
 export default function ScrollToTop() {
 
-  const [visible, setVisible] = useState(false);
-
-  window.addEventListener("scroll", () => {
-    window.scroll > 300 ? setVisible(true) : setVisible(false);
-  });
+  const scrollTop = () => {
+    scroll.scrollToTop();
+  }
 
   return (
-    <div className={`scrollTop ${visible ? "visible" : ""}`}>
+    <button className="scrollTop" onClick={scrollTop}>
       <a href="#">
         <BsChevronUp />
       </a>
-    </div>
+    </button>
   );
 }
 
-/* REVISAR CODIGO */
