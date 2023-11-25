@@ -1,16 +1,17 @@
 import { BsChevronUp } from "react-icons/bs";
 
 export default function ScrollToTop() {
-
-  const scrollTop = () => {
-    scroll.scrollToTop();
-  }
+  
+  const backTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
   return (
-    <button className="scrollTop" onClick={scrollTop}>
-      <a href="#">
+    <button onClick={backTop} className="scrollTop" >
         <BsChevronUp />
-      </a>
     </button>
   );
 }

@@ -1,6 +1,8 @@
 .scrollTop {
+   /*  visibility: hidden;
+    opacity: 0; */
     position: fixed;
-    z-index: 100;
+    z-index: 1899;
     bottom: 5%;
     right: 5%;
     height: 4rem;
@@ -17,7 +19,6 @@
         box-shadow: 2px 1000px 1px var(--background) inset;
         cursor: pointer;
         transition: 0.5s ease-in-out;
-        cursor: pointer;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -29,4 +30,8 @@
             font-size: 2rem;
             color: var(--accent-color1);
         }    
+}
+.visible {
+  visibility: visible;
+  opacity: 1;
 }

@@ -9,24 +9,20 @@ import Like from "./components/Like";
 import Signup from "./components/Signup";
 import Footer from "./components/Footer";
 
-
 export default function App() {
- 
-  
   return (
     <div className="container-app">
-      <ScrollToTop />
-      <NavBar />
-      <Home />
-      <Free />
-      <Clients />
-      <SuperRare />
-      <Realese />
-      <Like />
-      <Signup />
-      <Footer />
+        <NavBar />
+        <Home />
+        <Free />
+        <Clients />
+        <SuperRare />
+        <Realese />
+        <Like />
+        <Signup />
+        <Footer />
+        <ScrollToTop />
+
     </div>
-  )
+  );
 }
-
-

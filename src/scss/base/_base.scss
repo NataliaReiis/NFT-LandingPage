@@ -32,13 +32,15 @@
 html{
     scroll-behavior: smooth;
 }
+body{
+    overflow-x: hidden;
 
+}
 .container-app{
     background-color: var(--background);
-    height: 100vh;
+    height: auto;
     width: 100vw;
     font-family: var(--font-family);
-    overflow-x: hidden ;
     transition: 0.5s ease-in-out;
     padding: 2rem 4rem;
     @media screen and (min-width: 280px) and (max-width: 1000px) {
