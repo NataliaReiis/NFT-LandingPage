@@ -7,9 +7,20 @@ nav {
       img {
         height: 100%;
       }
+
+      }
       .toggle-container {
         display: none;
-      }
+          
+          .mode {
+            .dark {
+              color: black;
+            }
+            .light {
+              color: yellow;
+            }
+          }
+        }
     }
   }
   .links-container {
@@ -19,6 +30,12 @@ nav {
       gap: 4rem;
       margin: 1em;
       li {
+        .dark {
+          color: black;
+        }
+        .light {
+          color: yellow;
+        }
         a {
           color: var(--accent-color1);
           text-decoration: none;
@@ -30,5 +47,5 @@ nav {
         }
       }
     }
-  }
 }
+

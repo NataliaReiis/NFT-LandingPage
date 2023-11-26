@@ -1,6 +1,23 @@
+import { useEffect, useState } from "react";
 import { BsChevronUp } from "react-icons/bs";
 
 export default function ScrollToTop() {
+  const [visible, setVisible] = useState(false)
+
+  const handleScroll = () => {
+    const scrollTop = window.scrollY;
+
+    setVisible(scrollTop > 300 );
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener(scroll, handleScroll)
+    }
+  }, []); 
+
   
   const backTop = () => {
     window.scrollTo({
@@ -10,7 +27,7 @@ export default function ScrollToTop() {
   };
 
   return (
-    <button onClick={backTop} className="scrollTop" >
+    <button onClick={backTop} className={`scrollTop ${visible ? "visible" : "" }`} >
         <BsChevronUp />
     </button>
   );
