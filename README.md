@@ -1,4 +1,4 @@
-# Landign Page NFT
+# Landing Page NFT
 
 Codigo refatorado, o deixando mais limpo e atualizado.
 
