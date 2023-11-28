@@ -12,7 +12,7 @@
   --accent-color3: #cccccc;
   --card-color: #000000;
   --background: #111111;
-    --font-family: 'Inter', sans-serif;
+  --font-family: 'Inter', sans-serif;
 }
 
 [data-theme="light"] {
@@ -38,7 +38,7 @@ body{
 }
 .container-app{
     background-color: var(--background);
-    height: auto;
+    height: 1000%;
     width: 100vw;
     font-family: var(--font-family);
     transition: 0.5s ease-in-out;

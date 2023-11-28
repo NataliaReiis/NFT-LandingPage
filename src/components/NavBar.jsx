@@ -1,15 +1,15 @@
 /* eslint-disable react/prop-types */
-/* import { useState } from "react";
- import {GiHamburguerManeu} from "react-icons/gi";
-import {MdClose} from "react-icons/md"; */
+import { useState } from "react";
+import { GiHamburgerMenu} from "react-icons/gi";
+import {MdClose} from "react-icons/md"; 
 import { ImSun } from "react-icons/im";
 import { BsFillMoonFill } from "react-icons/bs";
-
 import Logo from "../assets/logo.png";
 
 export default function NavBar({ changeTheme, currentTheme }) {
-  /*   const [navState, setNavState] = useState(false);
-   */
+
+   const [navState, setNavState] = useState(false);
+ 
   return (
     <nav>
       <div className="brand-container">
@@ -18,17 +18,22 @@ export default function NavBar({ changeTheme, currentTheme }) {
         </div>
         <div className="toggle-container">
           <div className="toggle">
-            <div className="mode">
-              {currentTheme === "dark" ? (
-                <ImSun className="light" />
+              {navState ? (
+                <MdClose onClick={() => setNavState(false)} />
               ) : (
-                <BsFillMoonFill className="dark" />
+                <GiHamburgerMenu onClick={() => setNavState(true)}/> 
               )}
-            </div>
+          </div>
+          <div className="mode" onClick={changeTheme}>
+            {currentTheme === "dark" ? (
+              <ImSun className="light" />
+            ) : (
+              <BsFillMoonFill className="dark" />
+            )}
           </div>
         </div>
       </div>
-      <div className="links-container">
+      <div className={`links-container ${navState ? "nav-visible" : ""}`}>
         <ul className="links">
           <li>
             <a href="#">Feature</a>

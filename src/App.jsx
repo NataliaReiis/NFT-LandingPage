@@ -1,5 +1,5 @@
-import ScrollToTop from "./components/ScrollToTop";
 import NavBar from "./components/NavBar";
+import ScrollToTop from "./components/ScrollToTop";
 import Home from "./components/Home";
 import Free from "./components/Free";
 import Clients from "./components/Clients";
@@ -7,14 +7,14 @@ import SuperRare from "./components/SuperRare";
 import Realese from "./components/Realese";
 import Like from "./components/Like";
 import Signup from "./components/Signup";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer"; 
 import { useEffect, useState } from "react";
 import ScrollReveal from 'scrollreveal';
 
 
 export default function App() { 
 
-  // Thema Dark e light
+// Thema Dark e light
   const [theme, setTheme] = useState('dark');
 
   const changeTheme = () => {
@@ -44,12 +44,13 @@ export default function App() {
   window.setTimeout(() => {
     const home = document.getElementsByClassName("home");
     home[0].computedStyleMap.transform = "none";
-    const nav = document.getElementsByName("nav");
+    const nav = document.getElementsByTagName("nav");
     nav[0].style.transform = "none";
   }, 1500);
 
   return (
     <div className="container-app" data-theme={theme}>
+        <ScrollToTop /> 
         <NavBar  changeTheme={changeTheme} currentTheme ={theme}/>
         <Home />
         <Free />
@@ -59,8 +60,6 @@ export default function App() {
         <Like />
         <Signup />
         <Footer />
-        <ScrollToTop />
-
     </div>
-  );
+  )
 }
